@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta name="generator" content="TechnoArt.es 1.0" />
@@ -20,9 +20,9 @@
     <link rel="manifest" href="images/site.webmanifest">
     <meta property="og:title" content="TechnArt.es">
     <meta property="og:url" content="technoart.es">
-    <meta property="og:description" content="Web development, Video mapping and consultant services">
+    <meta property="og:description" content="Desarrollo web, video mapping y servicios de consultoría">
     <meta property="og:site_name" content="TechnoArt.es">
-    <meta property="og:type" content="product">
+    <meta property="og:type" content="producto">
     <meta property="og:image" content="">
 </head>
 
@@ -36,13 +36,20 @@
                             <a class="navbar-brand logo" href="./">
                                 <img class="logo-img" src="./images/logo.svg" alt="TechnoArt.es"><span>TechnoArt.es</span>
                             </a>
+                            <div class="top-menu">
+                                <select id="language-select" onchange="changeLanguage()">
+                                    <option value="es-es" data-flag="https://flagcdn.com/24x18/es.png">🇪🇸</option>
+                                    <option value="en-us" data-flag="https://flagcdn.com/24x18/us.png">🇺🇸</option>
+                                    <option value="pt-br" data-flag="https://flagcdn.com/24x18/br.png">🇧🇷</option>
+                                </select>
+                            </div>
                         </section>
                         <section class="navbar-section hide-sm">
-                            <a class="btn btn-link" href="#we-do">What we do</a>
-                            <!-- <a class="btn btn-link" href="#we-work">How we work</a>
-                            <a class="btn btn-link" href="#price">Pricing</a> -->
-                            <a class="btn btn-link" href="#team">Our Team</a>
-                            <a class="btn btn-primary btn-hire-me" href="https://api.whatsapp.com/send?phone=34600473488" target="_blank">Contact</a>
+                            <a class="btn btn-link" href="#clients">Clientes</a>
+                            <a class="btn btn-link" href="#we-do">Lo que hacemos</a>
+                            <!-- <a class="btn btn-link" href="#price">Precios</a> -->
+                            <a class="btn btn-link" href="#team">Nuestro equipo</a>
+                            <a class="btn btn-primary btn-hire-me" href="https://api.whatsapp.com/send?phone=34600473488" target="_blank">Contacto</a>
                         </section>
                     </header>
                 </div>
@@ -53,12 +60,12 @@
                 <div class="column col-7 col-sm-12">
                     <div class="slogan-content">
                         <h1>
-                            <span class="slogan-bold">Web Development</span>
+                            <span class="slogan-bold">Desarrollo Web</span>
                             <span class="slogan-bold">Video Mapping</span>
-                            <span class="slogan-bold">Consultant Services</span>  
+                            <span class="slogan-bold">Consultoría</span>  
                         </h1>
-                        <p>TechnoArt.es is a dynamic and innovative company specializing in web development, video mapping, and consultant services.</p>
-                        <a class="btn btn-primary btn-lg btn-start" href="https://api.whatsapp.com/send?phone=34600473488" target="_blank">Start a project today</a>
+                        <p>TechnoArt.es es una empresa dinámica e innovadora que se especializa en desarrollo web, video mapping y servicios de consultoría.</p>
+                        <a class="btn btn-primary btn-lg btn-start" href="https://api.whatsapp.com/send?phone=34600473488" target="_blank">Empieza un proyecto hoy</a>
 
                     </div>
                 </div>
@@ -68,16 +75,39 @@
                 </div>
             </div>
         </div>
-        <div class="yeo-client">
+        <div class="yeo-client" id="clients">
             <div class="container yeo-client-list">
                 <div class="columns">
                     <div class="column col-12">
                         <h3 class="feature-title">
-                            Our clients
+                            Nuestros clientes
                     </h3>
                     <ul style="list-style-type: none;">
                         <li>
-                            <!-- <h4>In Spain: </h4> -->
+                            <h4>En Brasil: </h4>
+                        <div class="client-logo">
+                            <a href="#" target="_blank">
+                            <img src="./images/santander.png" alt="Santander">
+                        </a>
+                            <a href="#" target="_blank">
+                            <img src="./images/decathlon.png" alt="Decathlon">
+                        </a>
+                            <a href="#" target="_blank">
+                            <img src="./images/santillana.png" alt="Santillana">
+                        </a>
+                            <a href="#" target="_blank">
+                            <img src="./images/dufry.png" alt="Dufry">
+                        </a>
+                            <a href="#" target="_blank">
+                            <img src="./images/pluggto.png" alt="Plugg.to">
+                        </a>
+                            <a href="#" target="_blank">
+                            <img src="./images/laureate.png" alt="Laureate">
+                        </a>
+                        </div>
+                        </li>
+                        <li>
+                            <h4>En España: </h4>
                             <div class="client-logo">
                                 <a href="https://antad.es/" target="_blank">
                                     <img src="./images/antad.png" alt="ANTAD">
@@ -87,29 +117,6 @@
                                 </a>
                             </div>
                         </li>
-                        <!-- <li>
-                            <h4>In Brazil: </h4>
-                        <div class="client-logo">
-                            <a href="#" target="_blank">
-                            <img src="./images/algolia.svg" height="40px" alt="">
-                        </a>
-                            <a href="#" target="_blank">
-                            <img src="./images/lapa-logo.svg" height="40px" alt="">
-                        </a>
-                            <a href="#" target="_blank">
-                            <img src="./images/hugo.svg" height="40px" alt="">
-                        </a>
-                            <a href="#" target="_blank">
-                            <img src="./images/codecademy.svg" height="40px" alt="">
-                        </a>
-                            <a href="#" target="_blank">
-                            <img src="./images/aws.svg" height="40px" alt="">
-                        </a>
-                            <a href="#" target="_blank">
-                            <img src="./images/stripe.svg" height="40px" alt="">
-                        </a>
-                        </div>
-                        </li> -->
                     </ul>
                     </div>
                 </div>
@@ -119,126 +126,40 @@
             <div class="container yeo-body">
                 <div class="columns">
                     <div class="column col-12">
-                        <h2 class="feature-title">What We Do</h2>
+                        <h2 class="feature-title">Lo que hacemos</h2>
                     </div>
                     <div class="column col-4 col-sm-12">
                         <div class="yeo-do-content">
                             <img src="./images/what-we-do-3.svg" alt="">
-                            <h3>Web Development</h3>
-                            <p>We leverage cutting-edge technology and creative design to deliver high-quality websites that enhance online presence.</p>
-                            <!-- <a href="">Learn more</a> -->
+                            <h3>Desarrollo Web</h3>
+                            <p>Utilizamos tecnología de vanguardia y diseño creativo para ofrecer sitios web de alta calidad que mejoran la presencia en línea.</p>
+                            <!-- <a href="">Aprende más</a> -->
                         </div>
                     </div>
                     <div class="column col-4 col-sm-12">
                         <div class="yeo-do-content">
                             <img src="./images/what-we-do-1.svg" alt="">
                             <h3>Video Mapping</h3>
-                            <p>Our video mapping services transform ordinary spaces into extraordinary visual experiences.</p>
-                            <!-- <a href="">Learn more</a> -->
+                            <p>Nuestros servicios de video mapping transforman espacios comunes en experiencias visuales extraordinarias.</p>
+                            <!-- <a href="">Aprende más</a> -->
                         </div>
                     </div>
                     <div class="column col-4 col-sm-12">
                         <div class="yeo-do-content">
                             <img src="./images/what-we-do-2.svg" alt="">
-                            <h3>Consultant Services</h3>
-                            <p>Our team of expert consultants provides strategic guidance to help businesses navigate the digital landscape and achieve their goals.</p>
-                            <!-- <a href="">Learn more</a> -->
+                            <h3>Servicios de Consultoría</h3>
+                            <p>Nuestro equipo de expertos brinda orientación estratégica para ayudar a las empresas a navegar en el entorno digital y alcanzar sus objetivos.</p>
+                            <!-- <a href="">Aprende más</a> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div class="yeo-work" id="we-work">
-            <div class="container yeo-body">
-                <div class="columns">
-                    <div class="column col-12 col-sm-12">
-                        <h2 class="feature-title">How We Work</h2>
-                    </div>
-                    <div class="column col-10 col-sm-12 centered">
-                        <h2 class="yeo-work-feature">
-                        We build <span class="yeo-work-feature-bold">reliable infrastructure</span>, use comprehensive in-house tools.
-                    </h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="yeo-price" id="price">
-            <div class="container yeo-body  col-sm-12">
-                <div class="columns">
-                    <div class="column col-4 col-sm-12">
-                        <div class="panel">
-                            <div class="panel-header">
-                                <div class="panel-title"><span>PRO</span></div>
-                            </div>
-                            <div class="panel-body">
-                                <p>
-                                    <span class="price">$2500 </span>
-                                    <span>/ month</span>
-                                </p>
-                                <ul>
-                                    <li><strong>10</strong> billable hours included per month.</li>
-                                    <li>Billable hourly rate of <strong>$300</strong> after the included 10 hours are utilized.</li>
-                                    <li>24/7/365 on-call and 99.9% SLA</li>
-                                    <li>Communication via ticketing system and e-mail.</li>
-                                </ul>
-                            </div>
-                            <div class="panel-footer">
-                                <button class="btn btn-primary btn-price">Contact Us</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column col-4 col-sm-12">
-                        <div class="panel">
-                            <div class="panel-header">
-                                <div class="panel-title"><span>PREMIUM</span></div>
-                            </div>
-                            <div class="panel-body">
-                                <p>
-                                    <span class="price">$5000 </span>
-                                    <span>/ month</span>
-                                </p>
-                                <ul>
-                                    <li><strong>10</strong> billable hours included per month.</li>
-                                    <li>Billable hourly rate of <strong>$300</strong> after the included 10 hours are utilized.</li>
-                                    <li>24/7/365 on-call and 99.9% SLA</li>
-                                    <li>Communication via ticketing system and e-mail.</li>
-                                </ul>
-                            </div>
-                            <div class="panel-footer">
-                                <button class="btn btn-primary btn-price">Contact Us</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column col-4 col-sm-12">
-                        <div class="panel">
-                            <div class="panel-header">
-                                <div class="panel-title"><span>ENTERPRISE</span></div>
-                            </div>
-                            <div class="panel-body">
-                                <p>
-                                    <span class="price">$15000 </span>
-                                    <span>/ month</span>
-                                </p>
-                                <ul>
-                                    <li><strong>10</strong> billable hours included per month.</li>
-                                    <li>Billable hourly rate of <strong>$300</strong> after the included 10 hours are utilized.</li>
-                                    <li>24/7/365 on-call and 99.9% SLA</li>
-                                    <li>Communication via ticketing system and e-mail.</li>
-                                </ul>
-                            </div>
-                            <div class="panel-footer">
-                                <button class="btn btn-primary btn-price">Contact Us</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div class="yeo-team" id="team">
             <div class="container yeo-body">
                 <div class="columns">
                     <div class="column col-12">
-                        <h2 class="feature-title">Meet Our Team</h2>
+                        <h2 class="feature-title">Conoce a nuestro equipo</h2>
                     </div>
                     <div class="column col-4 col-sm-12">
                         <!-- <a href=""><img class="s-circle" src="./images/team-1.jpg" alt=""></a>
@@ -248,17 +169,17 @@
                     <div class="column col-4 col-sm-12">
                         <a href="https://www.linkedin.com/in/daniel-varga-7414381b/" target="_blank"><img class="s-circle" src="./images/daniel_varga.jpg" alt=""></a>
                         <a href="https://www.linkedin.com/in/daniel-varga-7414381b/" target="_blank"><span class="name">Daniel de Luna M. Varga</span></a>
-                        <!-- <span class="title">Designer</span> -->
+                        <!-- <span class="title">Diseñador</span> -->
                     </div>
                     <div class="column col-4 col-sm-12">
                         <!-- <a href=""><img class="s-circle" src="./images/team-3.jpg" alt=""></a>
-                        <a href="https://www.lapa.ninja/"><span class="name">Maria Oto</span></a>
-                        <span class="title">Developer</span> -->
+                        <a href="https://www.lapa.ninja/"><span class="name">Jane Doe</span></a>
+                        <span class="title">Gerente de proyectos</span> -->
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div class="yeo-open-source">
+<!-- <div class="yeo-open-source">
             <div class="container yeo-body">
                 <div class="columns">
                     <div class="column col-12">
@@ -344,5 +265,17 @@
             </div>
         </div>
 </body>
+
+<script>
+    function changeLanguage() {
+        var select = document.getElementById("language-select");
+        var language = select.value;
+        if(language == "es-es"){
+            window.location.href = "/";
+        }else{
+            window.location.href = "/" + language;
+        }
+    }
+</script>
 
 </html>

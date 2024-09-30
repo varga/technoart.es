@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 1280px;
+    max-width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
 }
@@ -84,7 +84,7 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%); */
 
 .slogan {
     background: transparent;
-    /* padding-top: 3rem; */
+    padding-top: 8rem;
     color: #fff;
     text-align: left;
     max-width: 1280px;
@@ -108,11 +108,43 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%); */
 }
 
 .yeo-header {
-    background: transparent;
+   
+    position: fixed;
+    top: 0;
+    background:rgba(0,0,0,1);
+    z-index:1000;
 }
+
 
 .yeo-header a {
     color: #fff;
+}
+
+.top-menu{
+        margin: 20px;
+        position: fixed;
+        top: 59px;
+        left: 300px;
+}
+
+.top-menu select {
+    background-color: #000;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.top-menu select option {
+    background-color: #fff;
+    color: black;
+}
+
+.flag {
+    width: 24px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 .slogan .slogan-bold {
@@ -145,7 +177,7 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%); */
 .yeo-header .navbar {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 1.5rem 0 1rem 0;
+    padding: 0.7rem 0;
 }
 
 .yeo-header .navbar-section .btn.btn-link {
@@ -179,11 +211,13 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%); */
 }
 
 
-.client-logo {}
+.client-logo {
+    margin: 40px 0;
+}
 
 .yeo-client a {
     display: inline-block;
-    margin-right: 3.5rem;
+    margin-right: 3rem;
 }
 
 .yeo-client a:last-child {
@@ -391,7 +425,7 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%); */
 @media (max-width: 600px) {
 
     .slogan {
-        padding-top: 0rem;
+        /* padding-top: 0rem; */
     }
 
     .slogan h1 {
@@ -423,7 +457,8 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%); */
     }
 
     .yeo-client a {
-        margin: 10px 15px;
+        margin: 20px 0;
+        width: 100%;
     }
 
     .yeo-price .panel {
