@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Cardapio</h1>
+
+    <div id="Select">
+        <label for="mySelect">Escolha uma opção:</label>
+        <select id="mySelect">
+            <option value="">Selecione...</option>
+        </select>
+    </div>
+    <br><br>
+    <div id="opcoesCheckbox"></div>
+    <div id="extrasCheckbox"></div>
+    <div id="resultado">
+        <br><br>
+        <button style="display:none;" id="enviar">Enviar</button>
+    </div>
+    
+    <script>
+        function loadSelectOptions() {
+            const selectElement = document.getElementById('mySelect');
+            const options = [
+                { value: 'Clássico', text: 'Clássico' },
+                { value: 'Forest Berry', text: 'Forest Berry' },
+                { value: 'Freezie', text: 'Freezie' },
+                { value: 'Greenie', text: 'Greenie' },
+                { value: 'Vegan Delight', text: 'Vegan Delight' }
+            ];
+
+            options.forEach(option => {
+                const optionElement = document.createElement('option');
+                optionElement.value = option.value;
+                optionElement.textContent = option.text;
+                selectElement.appendChild(optionElement);
+            });
+        }
+
+        function atualizarTexto() {
+            const selectElement = document.getElementById('mySelect');
+            const valorSelecionado = selectElement.value;
+
+   
+            const textos = {
+                    "Clássico": ["morango", "banana", "abacaxi", "manga", "pêssego", "mel", "gelo", "iogurte"],
+                    "Forest Berry": ["morango", "framboesa", "mirtilo", "mel", "gelo", "iogurte"],
+                    "Freezie": ["amora", "mirtilo", "groselha preta", "suco de uva", "iogurte congelado"],
+                    "Greenie": ["maçã verde", "kiwi", "limão", "abacate", "espinafre", "gelo", "suco de maçã"],
+                    "Vegan Delight": ["morango", "maracujá", "abacaxi", "manga", "pêssego", "gelo", "leite de soja"],
+                };
+
+            const divOpcoes = document.getElementById('opcoesCheckbox');
+            divOpcoes.innerHTML = '';
+            divOpcoes.innerHTML += 'Desmarque os ingredientes que deseja remover';
+            divOpcoes.appendChild(document.createElement('br'));
+            divOpcoes.appendChild(document.createElement('br')); 
+
+            textos[valorSelecionado].forEach(opcao => {
+  
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.value = opcao;
+                checkbox.id = `checkbox-${opcao}`;
+                checkbox.name = 'opcoes';
+
+                const label = document.createElement('label');
+                label.htmlFor = `checkbox-${opcao}`;
+                label.textContent = opcao;
+                checkbox.checked = true;
+
+                divOpcoes.appendChild(checkbox);
+                divOpcoes.appendChild(label);
+                divOpcoes.appendChild(document.createElement('br'));
+            });
+
+            const divExtras = document.getElementById('extrasCheckbox');
+            divExtras.innerHTML = '';
+            divExtras.appendChild(document.createElement('br'));
+            divExtras.innerHTML += 'Marque os extras que deseja adicionar <br><br>Extras:';
+            divExtras.appendChild(document.createElement('br'));
+            divExtras.appendChild(document.createElement('br')); 
+
+            const extras =  ["banana", "sorvete", "chocolate", "amendoim", "cereja"];
+
+            extras.forEach(extra => {
+  
+                const checkbox2= document.createElement('input');
+                checkbox2.type = 'checkbox';
+                checkbox2.value = extra;
+                checkbox2.id = `checkbox-${extra}`;
+                checkbox2.name = 'opcoes';
+
+                const label = document.createElement('label');
+                label.htmlFor = `checkbox-${extra}`;
+                label.textContent = extra;
+
+                divExtras.appendChild(checkbox2);
+                divExtras.appendChild(label);
+                divExtras.appendChild(document.createElement('br'));
+            });
+
+            const button = document.getElementById('enviar');
+            button.style.display = 'block';
+
+        }
+
+        function mostrarResultado() {
+            const selectElement = document.getElementById('mySelect');
+            const valorSelecionado = selectElement.value;
+            const checkboxes = document.querySelectorAll('input[name="opcoes"]:checked');
+            const selecionados = Array.from(checkboxes).map(checkbox => {
+                return checkbox.value;
+            });
+            console.log(selecionados);
+            const select = document.getElementById('Select');
+            select.innerHTML = '';
+            const divOpcoes = document.getElementById('opcoesCheckbox');
+            divOpcoes.innerHTML = '';
+            const divExtras = document.getElementById('extrasCheckbox');
+            divExtras.innerHTML = '';
+            const div = document.getElementById('resultado');
+            div.innerHTML = '<pre>'+selecionados+'</pre>';
+        }
+
+        window.onload = loadSelectOptions;
+        document.getElementById('mySelect').addEventListener('change', atualizarTexto);
+        document.getElementById('enviar').addEventListener('click', mostrarResultado);
+    </script>
+</body>
+</html>
