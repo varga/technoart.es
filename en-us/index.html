@@ -18,12 +18,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
     <link rel="manifest" href="../images/site.webmanifest">
-    <meta property="og:title" content="TechnoArt.es">
-    <meta property="og:url" content="technoart.es">
-    <meta property="og:description" content="Web development, Video mapping and consultant services">
-    <meta property="og:site_name" content="TechnoArt.es">
-    <meta property="og:type" content="product">
-    <meta property="og:image" content="">
+    <meta property="og:title" content="TechnoArt.es - en-us">
+    <meta property="og:url" content="technoart.es/en-us/">
+    <meta property="og:description" content="Web development, vjing and video mapping and consultant services">
+    <meta property="og:site_name" content="TechnoArt.es - en-us">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://technoart.es/images/android-chrome-512x512.png">
 </head>
 
 <body>
@@ -39,17 +39,26 @@
                         </section>
                         <section class="navbar-section">
                             <section class="navbar-section hide-sm">
-                                <a class="btn btn-link" href="#clients">Clients</a>
-                                <a class="btn btn-link" href="#we-do">What we do</a>
-                                <a class="btn btn-link" href="#team">Our Team</a>
+                                <ul class="menu1">
+                                    <li><a class="btn btn-link" href="#clients">Clients</a></li>
+                                    <li>
+                                        <a class="btn btn-link" href="#we-do">What we do</a>
+                                    <ul class="submenu">
+                                        <li><a class="btn btn-link" href="#we-do">Web Development</a></li>
+                                        <li><a class="btn btn-link" href="/vj">Vjing and Mapping</a></li>
+                                        <li><a class="btn btn-link" href="#we-do">Consultant Services</a></li>
+                                    </ul>
+                                    </li>
+                                    <li><a class="btn btn-link" href="#team">Our Team</a></li>
+                                </ul>
                                 <!-- <a class="btn btn-link" href="#price">Pricing</a> -->
                                 <a class="btn btn-primary btn-hire-me" href="https://api.whatsapp.com/send?phone=34600473488" target="_blank">Contacto</a>
                             </section>
                             <section class="navbar-section">
                                 <select id="language-select" onchange="changeLanguage()">
+                                    <option value="es-es" data-flag="https://flagcdn.com/24x18/es.png">🇪🇸</option>
                                     <option value="en-us" data-flag="https://flagcdn.com/24x18/us.png">🇺🇸</option>
                                     <option value="pt-br" data-flag="https://flagcdn.com/24x18/br.png">🇧🇷</option>
-                                    <option value="es-es" data-flag="https://flagcdn.com/24x18/es.png">🇪🇸</option>
                                 </select>
                             </section>
                         </section>
@@ -63,7 +72,7 @@
                     <div class="slogan-content">
                         <h1>
                             <span class="slogan-bold">Web Development</span>
-                            <span class="slogan-bold">Video Mapping</span>
+                            <span class="slogan-bold">Vjing and Mapping</span>
                             <span class="slogan-bold">Consultant Services</span>  
                         </h1>
                         <p>TechnoArt.es is a dynamic and innovative company specializing in web development, video mapping, and consultant services.</p>
@@ -141,9 +150,9 @@
                     <div class="column col-4 col-sm-12">
                         <div class="yeo-do-content">
                             <img src="../images/what-we-do-1.svg" alt="">
-                            <h3>Video Mapping</h3>
-                            <p>Our video mapping services transform ordinary spaces into extraordinary visual experiences.</p>
-                            <!-- <a href="">Learn more</a> -->
+                            <h3>Vjing and Video Mapping</h3>
+                            <p>Our vjing and video mapping services transform ordinary spaces into extraordinary visual experiences.</p>
+                            <a href="/vj">Learn more</a>
                         </div>
                     </div>
                     <div class="column col-4 col-sm-12">
